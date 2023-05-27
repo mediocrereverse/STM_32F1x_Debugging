@@ -40,8 +40,11 @@ Now you should see a pending carat screen like this.
 
 After this you can type help and a menu will pop up with the commands you can use with telnet to do stuff to the processor. And there is a lot of things. One thing we can do is halt. Type halt and enter. If there was an led blinking, it no longer is! Type resume to resume code execution as normal. 
 commands:
+
 halt
+
 resume
+
 step
 
 to dump flash use command:
