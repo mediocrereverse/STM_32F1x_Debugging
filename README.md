@@ -1,5 +1,6 @@
 # STM_32F1x_Debugging
 stm32 debugging using the st-link v2 and serial wire debugging (SWD). This is a very easy taught level of some of the basics of debugging for on chip operations without the money to afford something as awesome as a lauterbach or pe micro. 
+![IMG_1074](https://github.com/mediocrereverse/STM_32F1x_Debugging/assets/133725400/9d5d80af-369f-4faa-bb0e-373548454a4d)
 
 For starters we have to aquire some POS device to actually try some stuff on. Something not too complicated and easy to learn in a few days/ weeks at max. Oh and remember in this case chat gpt is at your disposal. If you have questions through this process that I cannot answer, please feel free to ask chatgpt. Something preferably under 15$, small, and easy to setup. The best thing for this that I have found that is easy to aquire is the stlink kits with an stm32 on ebay. The stlink will provide a direct connection to the stm32 and will take serial traffic from openocd and telnet commands and send them to the stm32. Think of it as an interperter. Here is a link /example. https://www.ebay.com/itm/404241984023 . This one should also have some base code on it. Something like an led blinking or something. After you recieve this, you can move on to the rest of the article. And it should be noted that gdb can be used with any code. X86, arm, mips, and anything else out there. You can figure that part out more if needed in the future with me in another repo.
 
@@ -8,6 +9,7 @@ sudo apt install openocd
 sudo apt install gdb
 
 With these tools everything should be good to go. Nettools may need to be installed if you have arch like me for telnet. Telnet will be used to do some basic command things and to copy over the baseline code. Then tansition into gdb for debugging the code. then jump into ghidra and look at the actual binary. That will also be in a seperate repo. 
+![IMG_1075](https://github.com/mediocrereverse/STM_32F1x_Debugging/assets/133725400/fd8b0345-24a9-4b9a-bef5-9f1da52b4960)
 
 #Connecting the STM32 to the ST-LINK V2
 swdio>dio
@@ -33,6 +35,7 @@ you now should have a terminal that states that you are connected and to connect
 telnet localhost 4444 - localhost is our local network and port 4444 is the connection to the stlink that openocd opened for you to use. It is the default listener for metasploit which means a similar connection can be used with metasploit ...?
 
 Now you should see a pending carat screen like this. 
+![Screenshot_2023-05-27_22-04-24](https://github.com/mediocrereverse/STM_32F1x_Debugging/assets/133725400/c5bbb873-ad73-476b-9074-b5f986ca6fe1)
 
 
 After this you can type help and a menu will pop up with the commands you can use with telnet to do stuff to the processor. And there is a lot of things. One thing we can do is halt. Type halt and enter. If there was an led blinking, it no longer is! Type resume to resume code execution as normal. 
