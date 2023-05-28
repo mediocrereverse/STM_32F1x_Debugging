@@ -1,4 +1,6 @@
 # STM_32F1x_Debugging
+Datasheet - https://www.st.com/resource/en/datasheet/stm32f103c8.pdf
+
 stm32 debugging using the st-link v2 and serial wire debugging (SWD). This is a very easy taught level of some of the basics of debugging for on chip operations without the money to afford something as awesome as a lauterbach or pe micro. 
 ![IMG_1074](https://github.com/mediocrereverse/STM_32F1x_Debugging/assets/133725400/9d5d80af-369f-4faa-bb0e-373548454a4d)
 
